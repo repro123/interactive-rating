@@ -40,3 +40,5 @@ npm-debug.log*
 Thumbs.db
 
 style-guide.md
+node_modules/
+package-lock.json

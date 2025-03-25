@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
-  <body>
-    <main>
-      <div>
-        <div>
-          <img src="./images/icon-star.svg" alt="" />
-          <h1>Rating Card</h1>
+
+  <body
+    class="min-h-dvh bg-bodyBg text-radioBg flex flex-col items-center justify-center"
+  >
+    <main class="border border-cardText grow grid place-items-center px-4">
+      <div class="w-full max-w-96">
+        <div class="bg-cardBg rounded-xl p-6 sm:p-8 w-full flex flex-col gap-4">
+          <div
+            class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center"
+          >
+            <img src="./images/icon-star.svg" alt="" />
+          </div>
+          <h1 class="sr-only">Rating Card</h1>
           <h2>How did we do?</h2>
           <p>
             Please let us know how we did with your support request. All
@@ -62,7 +73,7 @@
           </form>
         </div>
 
-        <div>
+        <div class="hidden" id="thankYou">
           <img src="./images/illustration-thank-you.svg" alt="" />
           <p>You selected <span id="selectedRating"></span> out of 5</p>
           <p>Thank you!</p>
@@ -74,7 +85,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="mt-auto">
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

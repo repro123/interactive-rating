@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-primary-orange: hsl(25, 97%, 53%);
+  --color-bodyBg: hsl(216, 12%, 8%);
+  --color-cardBg: hsl(213, 19%, 18%);
+  --color-radioBg: hsl(217, 12%, 63%);
+  --color-cardText: hsl(0, 100%, 100%);
+
+  /* font family */
+}

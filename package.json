@@ -1,0 +1,24 @@
+{
+  "name": "interactive-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive rating component coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/repro123/interactive-rating.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/repro123/interactive-rating/issues"
+  },
+  "homepage": "https://github.com/repro123/interactive-rating#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.16",
+    "tailwindcss": "^4.0.16"
+  }
+}
