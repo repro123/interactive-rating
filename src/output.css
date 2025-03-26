@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(0.808 0.114 19.571);
     --color-red-500: oklch(0.637 0.237 25.331);
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -204,6 +205,9 @@
   .mt-auto {
     margin-top: auto;
   }
+  .block {
+    display: block;
+  }
   .contents {
     display: contents;
   }
@@ -219,11 +223,17 @@
   .table {
     display: table;
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
   .min-h-dvh {
     min-height: 100dvh;
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -281,6 +291,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -395,6 +408,9 @@
   .text-primary-orange {
     color: var(--color-primary-orange);
   }
+  .text-red-300 {
+    color: var(--color-red-300);
+  }
   .text-red-500 {
     color: var(--color-red-500);
   }
@@ -470,6 +486,16 @@
   .has-checked\:text-bodyBg {
     &:has(*:checked) {
       color: var(--color-bodyBg);
+    }
+  }
+  .sm\:h-12 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:w-12 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 12);
     }
   }
   .sm\:p-8 {
