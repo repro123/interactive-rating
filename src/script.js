@@ -32,13 +32,12 @@ function sumbitForm() {
   for (let ratingValue of ratingInputs) {
     if (ratingValue.checked) {
       rating = ratingValue.value;
-      selectedRating.textContent = rating;
       break;
     }
-
-    showThankYouCard(thankYouCard);
-    hideRatingCard(ratingCard);
   }
+  selectedRating.textContent = rating;
+  showThankYouCard(thankYouCard);
+  hideRatingCard(ratingCard);
 }
 
 // function to handle error
