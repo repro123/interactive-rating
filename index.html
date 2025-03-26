@@ -20,63 +20,122 @@
   </head>
 
   <body
-    class="min-h-dvh bg-bodyBg text-radioBg flex flex-col items-center justify-center"
+    class="min-h-dvh bg-bodyBg text-cardText flex flex-col items-center justify-center font-ovepass leading-[1.5]"
   >
-    <main class="border border-cardText grow grid place-items-center px-4">
-      <div class="w-full max-w-96">
-        <div class="bg-cardBg rounded-xl p-6 sm:p-8 w-full flex flex-col gap-4">
+    <main class="grow grid place-items-center px-4">
+      <div class="w-full max-w-[26rem]">
+        <div
+          class="bg-[radial-gradient(100%_100%_at_50%_0%,_var(--color-gradient-1)_0%,_var(--color-gradient-2)_100%)] rounded-xl p-6 sm:p-8 w-full flex-col gap-4 flex"
+        >
           <div
             class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center"
           >
-            <img src="./images/icon-star.svg" alt="" />
+            <img src="./images/icon-star.svg" alt="" class="animate-bounce" />
           </div>
           <h1 class="sr-only">Rating Card</h1>
-          <h2>How did we do?</h2>
+          <h2 class="text-cardHead text-3xl mt-4">How did we do?</h2>
           <p>
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
 
           <form action="">
-            <fieldset>
-              <legend>Ratings</legend>
-              <div>
-                <label for="one"
+            <fieldset class="grid gap-3">
+              <legend class="sr-only">Ratings</legend>
+              <div class="flex items-center justify-between">
+                <label
+                  for="one"
+                  class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-cardHead cursor-pointer hover:text-bodyBg active:text-bodyBg has-checked:bg-primary-orange has-checked:text-bodyBg transition-colors duration-300 ease-in-out"
                   >1
-                  <input type="radio" name="rating" id="one" value="1" />
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="one"
+                    value="1"
+                    class="sr-only"
+                  />
                 </label>
 
-                <label for="two"
+                <label
+                  for="two"
+                  class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-cardHead cursor-pointer hover:text-bodyBg active:text-bodyBg has-checked:bg-primary-orange has-checked:text-bodyBg transition-colors duration-300 ease-in-out"
                   >2
-                  <input type="radio" name="rating" id="two" value="2" />
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="two"
+                    value="2"
+                    class="sr-only"
+                  />
                 </label>
 
-                <label for="three"
+                <label
+                  for="three"
+                  class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-cardHead cursor-pointer hover:text-bodyBg active:text-bodyBg has-checked:bg-primary-orange has-checked:text-bodyBg transition-colors duration-300 ease-in-out"
                   >3
-                  <input type="radio" name="rating" id="three" value="3" />
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="three"
+                    value="3"
+                    class="sr-only"
+                  />
                 </label>
 
-                <label for="four"
+                <label
+                  for="four"
+                  class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-cardHead cursor-pointer hover:text-bodyBg active:text-bodyBg has-checked:bg-primary-orange has-checked:text-bodyBg transition-colors duration-300 ease-in-out"
                   >4
-                  <input type="radio" name="rating" id="four" value="4" />
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="four"
+                    value="4"
+                    class="sr-only"
+                  />
                 </label>
 
-                <label for="five"
+                <label
+                  for="five"
+                  class="bg-cardBg p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-cardHead hover:text-bodyBg active:text-bodyBg has-checked:bg-primary-orange has-checked:text-bodyBg transition-colors duration-300 ease-in-out cursor-pointer"
                   >5
-                  <input type="radio" name="rating" id="five" value="5" />
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="five"
+                    value="5"
+                    class="sr-only"
+                  />
                 </label>
               </div>
-              <p aria-live="assertive" id="errorMessage"></p>
+              <p
+                aria-live="assertive"
+                id="errorMessage"
+                class="text-red-500 sr-only"
+              >
+                Please select a rating
+              </p>
             </fieldset>
 
-            <button type="submit" id="submit">Submit</button>
+            <button
+              type="submit"
+              id="submit"
+              class="border-2 border-primary-orange w-full p-2 rounded-full uppercase text-bodyBg hover:bg-cardHead bg-primary-orange font-bold tracking-wider mt-4 cursor-pointer"
+            >
+              Submit
+            </button>
           </form>
         </div>
 
-        <div class="hidden" id="thankYou">
+        <div
+          class="bg-[radial-gradient(100%_100%_at_50%_0%,_var(--color-gradient-1)_0%,_var(--color-gradient-2)_100%)] rounded-xl p-6 sm:p-8 w-full flex-col gap-4 hidden items-center justify-center text-center"
+          id="thankYou"
+        >
           <img src="./images/illustration-thank-you.svg" alt="" />
-          <p>You selected <span id="selectedRating"></span> out of 5</p>
-          <p>Thank you!</p>
+          <p class="mt-4 text-primary-orange rounded-full bg-cardBg py-2 px-4">
+            You selected <span id="selectedRating"></span> out of 5
+          </p>
+          <p class="text-3xl text-cardHead">Thank you!</p>
           <p>
             We appreciate you taking the time to give a rating. If you ever need
             more support, don’t hesitate to get in touch!
@@ -85,13 +144,24 @@
       </div>
     </main>
 
-    <footer class="mt-auto">
+    <footer class="mt-auto text-center text-sm sm:text-base pb-2 text-cardText">
       <p class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="text-primary-orange underline hover:no-underline"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/repro123/">Bello Ibrahim</a>.
+        >. Coded by
+        <a
+          href="https://github.com/repro123/"
+          class="text-primary-orange underline hover:no-underline"
+          target="_blank"
+          >Bello Ibrahim</a
+        >.
       </p>
     </footer>
+
+    <script src="./src/script.js"></script>
   </body>
 </html>
